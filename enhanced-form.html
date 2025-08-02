@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Web Page with Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        header, section, footer {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        header {
+            background-color: #f0f8ff;
+            text-align: center;
+        }
+        section {
+            background-color: #f9f9f9;
+        }
+        footer {
+            background-color: #f0f8ff;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img, video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        legend {
+            padding: 0 10px;
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .form-row {
+            margin-bottom: 15px;
+        }
+        .required:after {
+            content: " *";
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Company Website</h1>
+        <p>Showcasing HTML5 features and form validation</p>
+    </header>
+
+    <section id="lists">
+        <h2>Our Services (Lists)</h2>
+        <ul>
+            <li>Web Development
+                <ol>
+                    <li>Front-end</li>
+                    <li>Back-end</li>
+                    <li>Full-stack</li>
+                </ol>
+            </li>
+            <li>Mobile App Development</li>
+            <li>UI/UX Design</li>
+            <li>Digital Marketing</li>
+        </ul>
+        
+        <h3>Benefits of Working With Us</h3>
+        <dl>
+            <dt>Expert Team</dt>
+            <dd>10+ years of industry experience</dd>
+            <dt>Quality Assurance</dt>
+            <dd>Rigorous testing protocols</dd>
+            <dt>24/7 Support</dt>
+            <dd>Always available to help</dd>
+        </dl>
+    </section>
+
+    <section id="tables">
+        <h2>Pricing Plans (Tables)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Features</th>
+                    <th>Price</th>
+                    <th>Validity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic</td>
+                    <td>5 pages, 1 revision</td>
+                    <td>67299</td>
+                    <td>1 month</td>
+                </tr>
+                <tr>
+                    <td>Standard</td>
+                    <td>10 pages, 3 revisions</td>
+                    <td>60599</td>
+                    <td>3 months</td>
+                </tr>
+                <tr>
+                    <td>Premium</td>
+                    <td>Unlimited pages, 5 revisions</td>
+                    <td>90999</td>
+                    <td>6 months</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="media">
+        <h2>Our Work (Media)</h2>
+        <figure>
+            <img src="https://via.placeholder.com/600x400" alt="Sample project screenshot">
+            <figcaption>Sample project we completed for a client</figcaption>
+        </figure>
+        
+        <video width="600" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section id="form">
+        <h2>Contact Us</h2>
+        <form id="contactForm" novalidate>
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div class="form-row">
+                    <label for="fullName" class="required">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required minlength="3" 
+                           placeholder="Enter your full name" autocomplete="name">
+                </div>
+                
+                <div class="form-row">
+                    <label for="email" class="required">Email Address</label>
+                    <input type="email" id="email" name="email" required 
+                           placeholder="peterkaranga73@gmail.com" autocomplete="email">
+                </div>
+                
+                <div class="form-row">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" 
+                           placeholder="079-267-2899" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    <small>Format: 079-267-2899</small>
+                </div>
+                
+                <div class="form-row">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" max="2005-12-31">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Project Details</legend>
+                
+                <div class="form-row">
+                    <label for="service" class="required">Service Needed</label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Select a service --</option>
+                        <option value="web">Web Development</option>
+                        <option value="mobile">Mobile App Development</option>
+                        <option value="design">UI/UX Design</option>
+                        <option value="marketing">Digital Marketing</option>
+                    </select>
+                </div>
+                
+                <div class="form-row">
+                    <label for="budget">Budget Range</label>
+                    <input type="range" id="budget" name="budget" min="500" max="10000" step="500" value="2500">
+                    <output for="budget" id="budgetValue">23500</output>
+                </div>
+                
+                <div class="form-row">
+                    <label for="startDate">Preferred Start Date</label>
+                    <input type="date" id="startDate" name="startDate" min="2023-06-01">
+                </div>
+                
+                <div class="form-row">
+                    <label for="message" class="required">Project Description</label>
+                    <textarea id="message" name="message" required minlength="20" 
+                              placeholder="Describe your project in detail..." rows="5"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <div class="form-row">
+                    <label>How did you hear about us?</label>
+                    <div>
+                        <input type="radio" id="source-google" name="source" value="google">
+                        <label for="source-google" style="display: inline;">Google</label>
+                        
+                        <input type="radio" id="source-social" name="source" value="social">
+                        <label for="source-social" style="display: inline;">Social Media</label>
+                        
+                        <input type="radio" id="source-referral" name="source" value="referral">
+                        <label for="source-referral" style="display: inline;">Referral</label>
+                        
+                        <input type="radio" id="source-other" name="source" value="other">
+                        <label for="source-other" style="display: inline;">Other</label>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <label>Interested in (check all that apply):</label>
+                    <div>
+                        <input type="checkbox" id="newsletter" name="interests" value="newsletter">
+                        <label for="newsletter" style="display: inline;">Monthly Newsletter</label>
+                        
+                        <input type="checkbox" id="promotions" name="interests" value="promotions">
+                        <label for="promotions" style="display: inline;">Special Promotions</label>
+                        
+                        <input type="checkbox" id="webinar" name="interests" value="webinar">
+                        <label for="webinar" style="display: inline;">Free Webinars</label>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <label for="website">Your Website URL</label>
+                    <input type="url" id="website" name="website" placeholder="https://example.com">
+                </div>
+                
+                <div class="form-row">
+                    <label for="reference">Reference Number (readonly)</label>
+                    <input type="text" id="reference" name="reference" value="WEB2025" readonly>
+                </div>
+            </fieldset>
+
+            <div class="form-row">
+                <button type="submit">Submit Form</button>
+                <button type="reset">Reset Form</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 peter tech solutions. All rights reserved.</p>
+        <address>
+            Contact us at <a href="mailto:peterkaranga73@gmail.com">peterkaranga73@gmail.com</a>
+        </address>
+    </footer>
+
+    <script>
+        // Simple script to display range value (not part of validation)
+        document.getElementById('budget').addEventListener('input', function() {
+            document.getElementById('budgetValue').textContent = '$' + this.value;
+        });
+    </script>
+</body>
+</html>
